@@ -5,8 +5,14 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
+import Songs from './pages/Songs/Songs';
 
 
 const root = ReactDOM.createRoot(
@@ -14,9 +20,14 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Header title="Player Song Projet" />
-    <App />
-    <Footer />
+    <BrowserRouter>
+      <Header title="Player Song Project" />
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="songs" element={<Songs />} />
+      </Routes>
+    </BrowserRouter>
+    {/* <Footer /> */}
   </React.StrictMode>
 );
 

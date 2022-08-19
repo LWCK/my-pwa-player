@@ -1,13 +1,11 @@
 import React from 'react'
 import './Header.css'
-import { Container } from 'react-bootstrap'
+import NavbarComponent from '../NavbarComponent/NavbarComponent'
 
 const Header: React.FC<any> = ({ title }: any) => {
 
     return (
-        <Container fluid className="Header p-4">
-            <h1 className="titleHeader">{title}</h1>
-        </Container>
+        <NavbarComponent title={title} />
     )
 }
 

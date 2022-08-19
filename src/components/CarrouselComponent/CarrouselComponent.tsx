@@ -16,15 +16,15 @@ const CarrouselComponent: React.FC<any> = ({ i, event }: any) => {
                 onClick={() => handleClick(i)}
             />
             {/* <Carousel.Caption>
-        <h3>{i.fields.title}</h3>
-        <p>{i.fields.artist}</p>
-      </Carousel.Caption> */}
+                <h3>{i.fields.title}</h3>
+                <p>{i.fields.artist}</p>
+            </Carousel.Caption> */}
         </Carousel.Item>
     )
 
 
     return (
-        <Carousel fade className="carlist" indicators>
+        <Carousel className="carlist" indicators>
             {i && carrouselList}
         </Carousel>
     )

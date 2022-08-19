@@ -3,7 +3,7 @@ import './Player.css'
 import { Button, Container } from 'react-bootstrap'
 import ReactAudioPlayer from 'react-audio-player';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAnglesLeft, faAnglesRight, faBiohazard, faBolt, faBoltLightning, faBurst, faCapsules, faChild, faCoffee, faFaceGrinTongueWink, faFlagUsa, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faAnglesLeft, faAnglesRight, faBiohazard, faBolt, faBoltLightning, faBurst, faCapsules, faChild, faFaceGrinTongueWink, faFlagUsa, faStar } from '@fortawesome/free-solid-svg-icons'
 
 const Player: React.FC<any> = ({ list, index }) => {
 
@@ -78,10 +78,10 @@ const Player: React.FC<any> = ({ list, index }) => {
             <img src={list && list.records[indexPlayer].fields.image[0].url} className="img-songs mb-3" />
             <br />
             <h4>{list && list.records[indexPlayer].fields.title}</h4>
-            <small>{list && list.records[indexPlayer].fields.artist}</small> <br />
+            <small>{list && list.records[indexPlayer].fields.artist}</small><br />
             {list.records[indexPlayer].fields.lyrics &&
                 (showBtnLyrics ? (
-                    <Button className='mt-3 lyrics-btn' onClick={() => setShowBtnLyrics(false)} >Afficher les lyrics</Button>
+                    <Button className='mt-3 lyrics-btn' onClick={() => setShowBtnLyrics(false)}>Afficher les lyrics</Button>
                 )
                     : (
                         <>

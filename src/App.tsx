@@ -42,7 +42,6 @@ const App: React.FC<any> = () => {
     const index = songs.records.findIndex((i: any) => i.id === param.id)
     setSelectedSong(index)
     setShow(false)
-    // console.log(index)
   }
 
   const handleClose = () => {
@@ -50,14 +49,14 @@ const App: React.FC<any> = () => {
   }
 
   return (
-    <Container fluid className='fullSide leftSide p-3'>
+    <Container className='fullSide leftSide px-3 py-5'>
       <Row>
         {show ? (
           <>
-            <Col xs={12} md={6} xl={6}>
-              <CarrouselComponent i={songs.records} event={handleClick} />
+            <Col xs={12} md={7} xl={7}>
+              <CarrouselComponent i={songs.records} event={handleClick} fade={'fade'} />
             </Col>
-            <Col xs={12} md={6} xl={6} className='d-flex align-items-center py-4'>
+            <Col xs={12} md={5} xl={5} className='d-flex align-items-center py-4'>
               <ul>
                 <h4>Titres</h4>
                 {songs && songsTitleList}
