@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+.fullSide {
+  background-color: rgba(255, 255, 255, 0.912);
+  /* border-radius: 0px 200px 0px 200px; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.leftSide {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.785);
+  /* background-image: url('../src/img/logo.png'); */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 106% 100%;
+  min-height: calc(100vh - 20em);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 750px) {
+  .leftSide,
+  .rightSide {
+    min-height: 85vh;
+  }
+  .d-block {
+    height: 350px !important;
+  }
+  .leftSide {
+    background-image: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+  background-image: url("../src/img/1117.jpg");
+  background-size: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.d-block {
+  width: 100%;
+  height: 500px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a > span:hover {
+  cursor: pointer;
+  color: rgb(255, 136, 0);
+}
+
+ul > li {
+  text-shadow: 2px 2px 2px black;
+}
+
+.text-center > .btn {
+  background-color: rgb(255, 136, 0);
+  color: black;
+  border: solid black;
+}
+
+.text-center > .btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 136, 0);
+  border: solid black;
 }

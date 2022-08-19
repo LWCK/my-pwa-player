@@ -1,0 +1,11 @@
+.titleHeader {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.Header {
+    background-color: black;
+    color: rgb(255, 136, 0);
+    position: relative;
+    top: 0;
+}
