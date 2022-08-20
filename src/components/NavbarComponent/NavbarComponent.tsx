@@ -21,9 +21,9 @@ const NavbarComponent: React.FC<any> = ({ title }: any) => {
                 </Offcanvas.Header >
                 <Offcanvas.Body>
                     <Nav className="justify-content-end flex-grow-1 pe-3 nav-link">
-                        <Navbar.Text><Link to="/"><span>Home</span></Link></Navbar.Text>
-                        <Navbar.Text><Link to="/songs"><span>Listes des titres</span></Link></Navbar.Text>
-                        {/* <Nav> <Link to='https://airtable.com/shrtWpyUK1yXzEDWO' target='_blank' className='desktop'><span>Ajouter un titre ?</span></Nav> */}
+                        <Navbar.Text><Link to="/" className='mx-2'><span>Home</span></Link></Navbar.Text>
+                        <Navbar.Text><Link to="/songs" className='mx-2'><span>Listes des titres</span></Link></Navbar.Text>
+                        <Nav.Link href='https://airtable.com/shrtWpyUK1yXzEDWO' target='_blank' className='desktop'><span>Ajouter un titre ?</span></Nav.Link>
                     </Nav>
                 </Offcanvas.Body>
             </Navbar.Offcanvas >

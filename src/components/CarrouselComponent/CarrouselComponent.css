@@ -1,3 +1,7 @@
-.carousel-indicators{
-    display: none!important;
-  }
+.carousel-indicators {
+  display: none !important;
+}
+
+.shadowed {
+  background-color: rgb(0, 0, 0);
+}

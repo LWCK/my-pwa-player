@@ -25,13 +25,13 @@ const App: React.FC<any> = () => {
   }, []
   )
 
-  // console.log(songs && songs.records[0].fields)
+  console.log(songs && songs)
 
   const [show, setShow] = React.useState<boolean>(true)
 
   const songsTitleList = songs.records?.map((i: any) =>
     <>
-      <li><a onClick={() => handleClick(i)}><span key={i.id.toString()}> {i.fields.artist} - {i.fields.title}</span></a></li>
+      <li key={i.id.toString()} onClick={() => handleClick(i)}>{i.fields.artist} - {i.fields.title}</li>
     </>
   )
 
@@ -49,23 +49,23 @@ const App: React.FC<any> = () => {
   }
 
   return (
-    <Container className='fullSide leftSide px-3 py-5'>
-      <Row>
+    <Container fluid className='fullSide leftSide p-3'>
+      <Row className='wide'>
         {show ? (
           <>
             <Col xs={12} md={7} xl={7}>
-              <CarrouselComponent i={songs.records} event={handleClick} fade={'fade'} />
+              <CarrouselComponent i={songs.records} event={handleClick} />
             </Col>
             <Col xs={12} md={5} xl={5} className='d-flex align-items-center py-4'>
               <ul>
-                <h4>Titres</h4>
+                <h4 className='font'>Titres</h4>
                 {songs && songsTitleList}
               </ul>
             </Col>
           </>
         ) : (
-          <Col lg={12} className="rightSide pb-3">
-            <h4 className="p-3">Lecteur
+          <Col lg={12} className="rightSide">
+            <h4 className="p-3 font">Lecteur
               <Button className="float-end" onClick={() => handleClose()}>X</Button>
             </h4>
             <Player list={songs} index={selectedSong} />

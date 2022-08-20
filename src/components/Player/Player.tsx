@@ -31,7 +31,7 @@ const Player: React.FC<any> = ({ list, index }) => {
     }
 
     const prevSong = () => {
-        if (indexPlayer != 0) {
+        if (indexPlayer !== 0) {
             setIndexPlayer(indexPlayer - 1)
         }
         else {
@@ -75,10 +75,10 @@ const Player: React.FC<any> = ({ list, index }) => {
                     </div>
                 </div>
             )}
-            <img src={list && list.records[indexPlayer].fields.image[0].url} className="img-songs mb-3" />
+            <img src={list.records[indexPlayer].fields.image[0].url ? list.records[indexPlayer].fields.image[0].url : '/banner.png'} className="img-songs mb-3" alt="" />
             <br />
-            <h4>{list && list.records[indexPlayer].fields.title}</h4>
-            <small>{list && list.records[indexPlayer].fields.artist}</small><br />
+            <h4 className=''>{list && list.records[indexPlayer].fields.title}</h4>
+            <small className=''>{list && list.records[indexPlayer].fields.artist}</small><br />
             {list.records[indexPlayer].fields.lyrics &&
                 (showBtnLyrics ? (
                     <Button className='mt-3 lyrics-btn' onClick={() => setShowBtnLyrics(false)}>Afficher les lyrics</Button>
