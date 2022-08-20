@@ -25,13 +25,13 @@ const App: React.FC<any> = () => {
   }, []
   )
 
-  console.log(songs && songs)
+  // console.log(songs && songs.records[0].fields)
 
   const [show, setShow] = React.useState<boolean>(true)
 
   const songsTitleList = songs.records?.map((i: any) =>
     <>
-      <li key={i.id.toString()} onClick={() => handleClick(i)}>{i.fields.artist} - {i.fields.title}</li>
+      <li><a onClick={() => handleClick(i)}><span key={i.id.toString()}> {i.fields.artist} - {i.fields.title}</span></a></li>
     </>
   )
 
