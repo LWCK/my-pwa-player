@@ -29,6 +29,9 @@
   .leftSide {
     background-image: none;
   }
+  .img-songs {
+    height: 300px !important;
+  }
 }
 
 body {
