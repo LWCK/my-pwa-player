@@ -24,7 +24,7 @@ root.render(
       <Header title="Player Song Project" />
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="songs" element={<Songs />} />
+        <Route path="Player" element={<Songs />} />
       </Routes>
     </BrowserRouter>
     {/* <Footer /> */}
