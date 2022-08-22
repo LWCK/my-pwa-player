@@ -49,16 +49,16 @@ const App: React.FC<any> = () => {
   }
 
   return (
-    <Container fluid className='fullSide leftSide p-3'>
-      <Row className='wide'>
+    <Container className='leftSide'>
+      <Row className=''>
         {show ? (
           <>
-            <Col xs={12} md={7} xl={7}>
+            <Col xs={12} md={12} xl={7}>
               <CarrouselComponent i={songs.records} event={handleClick} />
             </Col>
-            <Col xs={12} md={5} xl={5} className='d-flex align-items-center py-4'>
+            <Col xs={12} md={12} xl={5} className='d-flex align-items-center'>
               <ul>
-                <h4 className='font'>Titres</h4>
+                <h4 className='font pt-3'>Liste</h4>
                 {songs && songsTitleList}
               </ul>
             </Col>
