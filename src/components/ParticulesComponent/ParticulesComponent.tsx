@@ -56,8 +56,9 @@ const ParticulesComponent: React.FC<any> = () => {
                         value: "#000000",
                     },
                     links: {
-                        // color: "#7800C9",
-                        color: "#000000",
+                        color: "#7800C9",
+                        // value: "#ffffff",
+                        // color: "#000000",
                         distance: 150,
                         enable: true,
                         opacity: 0.5,

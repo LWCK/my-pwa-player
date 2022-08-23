@@ -67,7 +67,7 @@ const Songs: React.FC<any> = () => {
         ) : (
           <Col lg={12} className="rightSide">
             <h4 className="p-3 font">Lecteur
-              <Button className="float-end" onClick={() => handleClose()}>X</Button>
+              <Button className="float-end" variant='' onClick={() => handleClose()}>X</Button>
             </h4>
             <Player list={songs} index={selectedSong} />
           </Col>

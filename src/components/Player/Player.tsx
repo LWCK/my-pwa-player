@@ -79,10 +79,10 @@ const Player: React.FC<any> = ({ list, index }) => {
                 onEnded={() => autoNext()}
             />
             <div className='text-center'>
-                <Button className='mx-3' onClick={() => prevSong()}>
+                <Button className='mx-3' variant='' onClick={() => prevSong()}>
                     <FontAwesomeIcon icon={faAnglesLeft} />
                 </Button>
-                <Button className='mx-3' onClick={() => nextSong()}><FontAwesomeIcon icon={faAnglesRight} /></Button>
+                <Button className='mx-3' variant='' onClick={() => nextSong()}><FontAwesomeIcon icon={faAnglesRight} /></Button>
             </div>
         </Container >
     )
