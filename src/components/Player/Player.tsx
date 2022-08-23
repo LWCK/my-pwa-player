@@ -3,12 +3,14 @@ import './Player.css'
 import { Button, Container } from 'react-bootstrap'
 import ReactAudioPlayer from 'react-audio-player';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAnglesLeft, faAnglesRight, faBiohazard, faBolt, faBoltLightning, faBurst, faCapsules, faChild, faFaceGrinTongueWink, faFlagUsa, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons'
+import ParticulesComponent from '../ParticulesComponent/ParticulesComponent';
+import Snow from '../Snow/Snow';
 
 const Player: React.FC<any> = ({ list, index }) => {
 
     const [indexPlayer, setIndexPlayer] = React.useState<any>(index)
-    const [snow, setSnow] = React.useState<boolean>(false)
+    const [anime, setAnime] = React.useState<boolean>(false)
     const [showBtnLyrics, setShowBtnLyrics] = React.useState<boolean>(true)
 
     const autoNext = () => {
@@ -39,41 +41,14 @@ const Player: React.FC<any> = ({ list, index }) => {
         }
     }
 
+
     return (
         <Container fluid className="Player" key={list && list.records[indexPlayer].fields.id}>
-            {snow && (
-                <div className="snowflakes" aria-hidden="true">
-                    <div className="snowflake">
-                        <FontAwesomeIcon icon={faStar} />
-                    </div>
-                    <div className="snowflake">
-                        <FontAwesomeIcon icon={faFlagUsa} />
-                    </div>
-                    <div className="snowflake">
-                        <FontAwesomeIcon icon={faBiohazard} />
-                    </div>
-                    <div className="snowflake">
-                        <FontAwesomeIcon icon={faBolt} />
-                    </div>
-                    <div className="snowflake">
-                        <FontAwesomeIcon icon={faBoltLightning} />
-                    </div>
-                    <div className="snowflake">
-                        <FontAwesomeIcon icon={faBurst} />
-                    </div>
-                    <div className="snowflake">
-                        <FontAwesomeIcon icon={faCapsules} />
-                    </div>
-                    <div className="snowflake">
-                        <FontAwesomeIcon icon={faChild} />
-                    </div>
-                    <div className="snowflake">
-                        <FontAwesomeIcon icon={faBoltLightning} />
-                    </div>
-                    <div className="snowflake">
-                        <FontAwesomeIcon icon={faFaceGrinTongueWink} />
-                    </div>
-                </div>
+            {anime && (
+                <>
+                    <Snow />
+                    <ParticulesComponent />
+                </>
             )}
             <img src={list.records[indexPlayer].fields.image[0].url ? list.records[indexPlayer].fields.image[0].url : '/banner.png'} className="img-songs mb-3" alt="" />
             <br />
@@ -99,8 +74,8 @@ const Player: React.FC<any> = ({ list, index }) => {
                 src={list && list.records[indexPlayer].fields.songfile[0].url}
                 autoPlay
                 controls
-                onPlay={() => setSnow(true)}
-                onPause={() => setSnow(false)}
+                onPlay={() => setAnime(true)}
+                onPause={() => setAnime(false)}
                 onEnded={() => autoNext()}
             />
             <div className='text-center'>
