@@ -46,7 +46,7 @@ const Player: React.FC<any> = ({ list, index }) => {
         <Container fluid className="Player" key={list && list.records[indexPlayer].fields.id}>
             {anime && (
                 <>
-                    <Snow />
+                    {/* <Snow /> */}
                     <ParticulesComponent />
                 </>
             )}
