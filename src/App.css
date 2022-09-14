@@ -1,11 +1,7 @@
-.mobile {
-  /* background-image: url("./assets/img/bkgmobile.jpg"); */
+body {
+  background-image: url("./assets/img/bg3.jpg");
   background-size: cover;
-  background-size: 100% 100%;
   background-repeat: no-repeat;
-  /* background-position: 50%; */
-  position: absolute;
-  height: 100vh;
 }
 
 .mobile a {

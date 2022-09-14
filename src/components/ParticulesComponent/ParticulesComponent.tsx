@@ -6,13 +6,13 @@ import { loadFull } from 'tsparticles';
 const ParticulesComponent: React.FC<any> = () => {
 
     const particlesInit = useCallback(async (engine: any) => {
-        console.log(engine);
+        // console.log(engine);
 
         await loadFull(engine);
     }, []);
 
     const particlesLoaded = useCallback(async (container: any | undefined) => {
-        await console.log(container)
+        // await console.log(container)
     }, []);
 
     return (
