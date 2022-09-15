@@ -6,19 +6,19 @@ import { Carousel } from 'react-bootstrap'
 const CarrouselComponent: React.FC<any> = ({ i, event }: any) => {
 
     const handleClick = event
+    // console.log(i[0].fields.image[0].url)
 
-    const carrouselList = i?.map((i: any) =>
-        <Carousel.Item key={i.id}>
-
+    const carrouselList = i?.map((param: any) =>
+        <Carousel.Item key={param.id}>
             <img
                 className="d-block"
-                src={i.fields.image[0].url ? i.fields.image[0].url : '/banner.png'}
+                src={param.fields.image[0].url}
                 alt="slide"
                 onClick={() => handleClick(i)}
             />
             {/* <Carousel.Caption className='font'>
-                <h3><span className='shadowed'>{i.fields.title}</span></h3>
-                <p><span className='shadowed'>{i.fields.artist}</span></p>
+                <h3><span className='shadowed'>{param.fields.title}</span></h3>
+                <p><span className='shadowed'>{param.fields.artist}</span></p>
             </Carousel.Caption> */}
         </Carousel.Item>
     )

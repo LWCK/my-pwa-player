@@ -1,6 +1,7 @@
 body {
   background-image: url("./assets/img/bg3.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
+  /* background-attachment: fixed; */
   background-repeat: no-repeat;
 }
 
